@@ -1,25 +1,88 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    
+    //VARIÁVEIS PARA INICIAR O CÓDIGO, REPRESENTANDO AS PEÇAS E QUANTAS CASAS VÃO SE MOVER
+    int torre, bispo, rainha, cavalo;
+    int movtorre, movbispo, movrainha, movcavalo;
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    //PEDE AO USUÁRIO DIGITAR QUANTAS CASA ELE DESEJA QUE A TORRE SE MOVE ( LENDO A ENTRANDO, E IMPRIMINDO O RESULTADO )
+    printf("Digite quantas casas você deseja mover a torre para a direita: \n");
+    scanf("%d", &movtorre);
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    //A VARIÁVEL "torre" ESTÁ SETADA EM 0, LOGO SERÁ SOMADO COM O VALOR QUE O USUÁRIO DER ENTRADA REPRESENTADO PELO "movtorre"
+    for(torre = 0; torre < movtorre; torre++){
+    printf("A torre foi para direita!\n");
+    }
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+
+
+    //PEDE AO USUÁRIO QUANTAS CASA ELE DESEJA QUE O BISPO SE MOVA ( LÊ, E IMPRIME O RESULTADO)
+    printf("\nDigite quantas casas você deseja mover o bispo: \n");
+    scanf("%d", &movbispo);
+
+     //A VARIÁVEL "bispo" ESTÁ SETADA EM 0, LOGO SERÁ SOMADO COM O VALOR QUE O USUÁRIO DER ENTRADA REPRESENTADO PELO "movbispo"
+    bispo = 0;
+    while(bispo < movbispo){
+        printf("O bispo se moveu para cima e para direita (diagonal)!\n");    
+        bispo++;
+    }
+
+
+
+    //PEDE AO USUARIO QUANTAS VEZES A RAINHA IRÁ SE MOVAR PARA A ESQUERDA.
+    printf("\nDigite quantas casas você deseja que a rainha se mova para a esquerda: \n");
+    scanf("%d", &movrainha);
+
+    //A VARIÁVEL "rainha" ESTÁ SETADA EM 0, LOGO SERÁ SOMADO COM O VALOR QUE O USUÁRIO DER ENTRADA REPRESENTADO PELO "movrainha"
+    rainha = 0;
+    do
+    {
+        printf("A rainha foi se moveu para a esquerda!\n"); 
+        rainha++;  
+    } while (rainha < movrainha);
+
+
+
+    //VARIAVEL PARA O USUÁRIO ESCOLHER SE O CAVALO IRÁ PARA A ESQUERDA OU DIREITA
+    int escolha;
+    movcavalo = 0;
+
+    printf("\nO cavalo se move em L, você quer que ele vá para esquerda(1) ou direita(2) ?\n");
+    scanf("%d", &escolha);
+
+    while (movcavalo < 1){
+    
+        for(cavalo = 0; cavalo < 2; cavalo++){
+        printf("A cavalo se moveu para cima!\n");
+    }
+
+    if(escolha == 1){
+        printf("O cavalo se moveu para esquerda!\n");
+    }else if(escolha == 2){
+        printf("O cavalo se moveu para direita!\n");
+    }
+    movcavalo++;
+
+
+
+
+
+}
+       
+
+    
+    
+    
+
+
+    
+
+
+
+
+
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
