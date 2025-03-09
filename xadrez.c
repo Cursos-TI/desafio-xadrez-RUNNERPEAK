@@ -12,7 +12,7 @@ int main() {
 
     //A VARIÁVEL "torre" ESTÁ SETADA EM 0, LOGO SERÁ SOMADO COM O VALOR QUE O USUÁRIO DER ENTRADA REPRESENTADO PELO "movtorre"
     for(torre = 0; torre < movtorre; torre++){
-    printf("A torre foi para direita!\n");
+    printf("A torre foi para a direita.\n");
     }
 
 
@@ -25,7 +25,7 @@ int main() {
      //A VARIÁVEL "bispo" ESTÁ SETADA EM 0, LOGO SERÁ SOMADO COM O VALOR QUE O USUÁRIO DER ENTRADA REPRESENTADO PELO "movbispo"
     bispo = 0;
     while(bispo < movbispo){
-        printf("O bispo se moveu para cima e para direita (diagonal)!\n");    
+        printf("O bispo se moveu para cima e para direita (diagonal).\n");    
         bispo++;
     }
 
@@ -39,7 +39,7 @@ int main() {
     rainha = 0;
     do
     {
-        printf("A rainha foi se moveu para a esquerda!\n"); 
+        printf("A rainha se moveu para a esquerda.\n"); 
         rainha++;  
     } while (rainha < movrainha);
 
@@ -52,20 +52,26 @@ int main() {
     printf("\nO cavalo se move em L, você quer que ele vá para esquerda(1) ou direita(2) ?\n");
     scanf("%d", &escolha);
 
-    while (movcavalo < 1){
+
+    //"movcavalo" SETADA EM 0, ENTÃO ENQUANTO FOR 0, SERÁ EXECUTADO O CÓDIGO IMPRIMINDO QUE O CAVALO FOI PARA CIMA DUAS VEZES.
+    while (movcavalo == 0){
     
         for(cavalo = 0; cavalo < 2; cavalo++){
-        printf("A cavalo se moveu para cima!\n");
+        printf("A cavalo se moveu para: cima.\n");
     }
 
-    if(escolha == 1){
-        printf("O cavalo se moveu para esquerda!\n");
-    }else if(escolha == 2){
-        printf("O cavalo se moveu para direita!\n");
+    //SE O USUÁRIO ESCOLHER 1, IRÁ IMPRIMIR QUE ELE FOI PARA A ESQUERDA.
+    while(escolha == 1){
+        printf("O cavalo se moveu para: esquerda.\n");
+        break;
+    }
+
+    //SE O USUÁRIO ESCOLHER 2, IRÁ IMPRIMIR QUE ELE FOI PARA A DIREITA.
+    while(escolha == 2){
+        printf("O cavalo se moveu para: direita.\n");
+        break;
     }
     movcavalo++;
-
-
 
 
 
